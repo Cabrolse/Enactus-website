@@ -5,6 +5,5 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
-// Contact form submission
 
-// Scroll animation for elements
+

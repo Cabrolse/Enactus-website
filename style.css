@@ -1,30 +1,58 @@
+:root {
+    --blue: rgba(26, 88, 196, 0.852);
+    --lblue: rgb(96, 165, 250);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+    /* Ensures padding/borders don't add to width/height */
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+}
 
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
+}
+
+.header {
+    z-index: 3;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
 /* Header & Navigation */
 .header {
-    background-color: var(--white);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar {
@@ -34,6 +62,9 @@ body {
     padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    z-index: 100;
+    position: relative;
+    width: 100%;
 }
 
 .logo {
@@ -48,7 +79,7 @@ body {
 
 
 .logo h1 {
-    color: var(--primary-color);
+
     font-size: 1.8rem;
     margin: 0;
     /* ensure it doesn't add extra vertical space */
@@ -61,23 +92,59 @@ body {
 
 .enc-logo {
     width: 16%;
+    transition: transform ease 0.2s;
+}
+
+.enc-logo:hover {
+    transform: rotate(15deg);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+
 }
 
 .nav-links a {
+    color: black;
+    font-size: 20px;
     text-decoration: none;
-    color: var(--text-color);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--secondary-color);
+    color: var(--blue);
+
+}
+
+.nav-pg {
+    transition: all 0.3s;
+}
+
+.nav-pg:hover {
+    transform: scale(1.1);
+}
+
+.nav-link-j {
+    border-radius: 40px;
+    background-color: var(--blue);
+    padding: 10px;
+    transition: transform ease 0.4s;
+    align-items: center;
+    border: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+.nav-link-j:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 35px rgba(129, 241, 249, 0.852),
+        0 0 30px rgba(0, 255, 255, 0.639),
+        0 0 45px rgba(0, 255, 255, 0.523);
 }
 
 .hamburger {
@@ -89,35 +156,42 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: var(--primary-color);
     margin: 5px 0;
     transition: 0.3s;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    padding: 4rem 2rem;
+    background-image: url(hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 2rem;
+    padding-top: 0;
+    padding-bottom: 4rem;
     text-align: center;
     min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    height: 100vh;
+    position: relative;
 }
 
 .hero-content {
-    padding: 0 200px;
+    padding: 0 8%;
+
 }
 
 .hero-content h2 {
-    font-size: 3rem;
+    color: #e3e7ec;
+    font-size: 4rem;
     margin-bottom: 1rem;
     animation: slideInDown 1s ease-out;
+
 }
 
 .hero-content p {
+    color: #dcdfe5;
     font-size: 1.3rem;
     margin-bottom: 2rem;
     opacity: 0.95;
@@ -126,7 +200,18 @@ body {
 
 .hero-img {
     border-radius: 5%;
-    padding-right: 30px;
+    min-width: 400px;
+    transition: all ease 1s;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: popIn 2s ease-out forwards;
+}
+
+
+
+.hero-img:hover {
+    transform: scale(105%);
+    box-shadow: black;
 }
 
 
@@ -134,20 +219,22 @@ body {
 /* Buttons */
 .cta-button {
     background-color: var(--accent-color);
-    color: var(--white);
-    padding: 0.8rem 2rem;
+    font-size: 300px;
+    padding: 1.5rem 6rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 40px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .cta-button:hover {
-    background-color: #d97706;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 0 35px rgba(129, 241, 249, 0.852),
+        0 0 30px rgba(0, 255, 255, 0.639),
+        0 0 45px rgba(0, 255, 255, 0.523);
 }
 
 .cta-a {
@@ -317,7 +404,14 @@ body {
 }
 
 .social-links img {
-    width: 60px;
+    width: 45px;
+    gap: 1rem;
+    border-radius: 50%;
+    transition: transform ease 0.5s;
+}
+
+.social-links img:hover {
+    transform: translateY(-4px);
 }
 
 /* Animations */
@@ -342,6 +436,20 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    50% {
+        opacity: 1;
+        transform: scale(1.04);
+        /* Overshoots bigger for bounce */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        /* Normal size */
     }
 }
 
