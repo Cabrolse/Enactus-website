@@ -1,5 +1,5 @@
 :root {
-    --blue: rgba(26, 88, 196, 0.852);
+    --blue: rgb(26, 88, 196);
     --lblue: rgb(96, 165, 250);
 }
 
@@ -69,30 +69,34 @@ body {
 
 .logo {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: flex-start; */
-    /* space between logo items */
+    align-items: center;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
-
+    gap: 0.5rem;
 }
 
-
 .logo h1 {
-
     font-size: 1.8rem;
-    margin: 0;
-    /* ensure it doesn't add extra vertical space */
+    margin: 0 0 0 -5px;
+    color: white;
 }
 
 .logo a {
     text-decoration: none;
     color: black;
+    display: flex;
+
+    align-items: center;
+
 }
 
+
+
 .enc-logo {
-    width: 16%;
+    width: 45px;
     transition: transform ease 0.2s;
+    fill: rgb(96, 165, 250);
 }
 
 .enc-logo:hover {
@@ -107,7 +111,7 @@ body {
 }
 
 .nav-links a {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     text-decoration: none;
     font-weight: 500;
@@ -136,15 +140,11 @@ body {
     border: none;
     color: white;
     font-size: 20px;
-
 }
 
 .nav-link-j:hover {
     transform: translateY(-2px);
-    box-shadow:
-        0 0 35px rgba(129, 241, 249, 0.852),
-        0 0 30px rgba(0, 255, 255, 0.639),
-        0 0 45px rgba(0, 255, 255, 0.523);
+    background-color: rgb(29, 78, 216);
 }
 
 .hamburger {
@@ -210,31 +210,49 @@ body {
 
 
 .hero-img:hover {
-    transform: scale(105%);
+    transform: scale(1.05);
     box-shadow: black;
 }
 
 
 
 /* Buttons */
-.cta-button {
-    background-color: var(--accent-color);
-    font-size: 300px;
+.cta-button-j {
+    background-color: var(--blue);
+    color: white;
     padding: 1.5rem 6rem;
     border: none;
     border-radius: 40px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all ease 0.3s;
+    box-shadow: 0px 10px 10px #371dc98e;
 }
 
-.cta-button:hover {
+.cta-button-c {
+    background-color: #3838388e;
+    border: 1px solid rgba(255, 255, 255, 0.356);
+    color: white;
+    padding: 1.5rem 3rem;
+    margin: 1rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s;
+
+}
+
+.cta-button-j:hover {
     transform: translateY(-2px);
-    box-shadow:
-        0 0 35px rgba(129, 241, 249, 0.852),
-        0 0 30px rgba(0, 255, 255, 0.639),
-        0 0 45px rgba(0, 255, 255, 0.523);
+    background-color: rgb(29, 78, 216);
+}
+
+.cta-button-c:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.3);
+
 }
 
 .cta-a {
@@ -373,10 +391,13 @@ body {
 }
 
 /* Footer */
+box-shadow: 0px 10px 10px #371dc98e;
+
 .footer {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 2rem;
+
     text-align: center;
 }
 
@@ -384,8 +405,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin: 50px 0px;
 }
 
 .social-links {
@@ -404,7 +427,7 @@ body {
 }
 
 .social-links img {
-    width: 45px;
+    width: 50px;
     gap: 1rem;
     border-radius: 50%;
     transition: transform ease 0.5s;
