@@ -178,7 +178,7 @@ body {
 }
 
 .hero-content {
-    padding: 0 8%;
+    padding: 0 10%;
 
 }
 
@@ -201,17 +201,17 @@ body {
 .hero-img {
     border-radius: 5%;
     min-width: 400px;
-    transition: all ease 1s;
     opacity: 0;
     transform: scale(0.3);
     animation: popIn 2s ease-out forwards;
+    transition: transform 0.3s ease;
 }
 
 
 
 .hero-img:hover {
     transform: scale(1.05);
-    box-shadow: black;
+    opacity: 1;
 }
 
 
@@ -342,6 +342,11 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: ease 0.4s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
 }
 
 .team-member h3 {
