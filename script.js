@@ -7,3 +7,14 @@ hamburger.addEventListener('click', () => {
 });
 
 
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 80) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
