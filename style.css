@@ -342,11 +342,11 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: ease 0.4s;
+    transition: ease 0.3s;
 }
 
 .team-member:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .team-member h3 {
