@@ -1,6 +1,8 @@
 :root {
     --blue: rgb(26, 88, 196);
     --lblue: rgb(96, 165, 250);
+    --social-blue: rgb(37, 87, 224);
+    --scoial-blue-hover: rgb(66, 13, 212);
 }
 
 html {
@@ -26,6 +28,11 @@ img {
 
 }
 
+a {
+    text-decoration: none;
+}
+
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,7 +56,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-
+    height: 90px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -65,6 +72,35 @@ body {
     z-index: 100;
     position: relative;
     width: 100%;
+}
+
+.TUD-h1 {
+    color: var(--lblue);
+
+}
+
+.header.scrolled {
+    background-color: rgba(255, 255, 255, 0.731);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    height: 75px;
+    transition: background-color 1s ease, box-shadow 0.5s ease, height 0.3s ease;
+}
+
+.header.scrolled .nav-links a {
+    color: rgb(0, 0, 0);
+}
+
+.header.scrolled h1 {
+    color: black;
+}
+
+.header.scrolled a:hover {
+    color: var(--blue);
+}
+
+.header.scrolled .TUD-h1 {
+    color: var(--blue);
 }
 
 .logo {
@@ -96,7 +132,6 @@ body {
 .enc-logo {
     width: 45px;
     transition: transform ease 0.2s;
-    fill: rgb(96, 165, 250);
 }
 
 .enc-logo:hover {
@@ -134,12 +169,13 @@ body {
 .nav-link-j {
     border-radius: 40px;
     background-color: var(--blue);
-    padding: 10px;
+    padding: 1rem 2rem;
     transition: transform ease 0.4s;
     align-items: center;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .nav-link-j:hover {
@@ -209,7 +245,7 @@ body {
 
 
 
-.hero-img:hover {
+.hero-img::after {
     transform: scale(1.05);
     opacity: 1;
 }
@@ -228,6 +264,7 @@ body {
     cursor: pointer;
     transition: all ease 0.3s;
     box-shadow: 0px 10px 10px #371dc98e;
+    animation: slideInUp 1s ease-out;
 }
 
 .cta-button-c {
@@ -241,6 +278,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.4s;
+    animation: slideInUp 1s ease-out;
 
 }
 
@@ -263,6 +301,7 @@ body {
 .about {
     padding: 4rem 2rem;
     background-color: var(--light-gray);
+    animation: slideInLeft 0.7s ease-out;
 }
 
 .about .container h2 {
@@ -305,6 +344,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+
 }
 
 .project-card:hover {
@@ -324,7 +364,6 @@ body {
 }
 
 .team h2 {
-    color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -337,12 +376,14 @@ body {
 }
 
 .team-member {
-    background-color: var(--white);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: ease 0.3s;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: popIn 1.1s ease-out forwards;
 }
 
 .team-member:hover {
@@ -350,12 +391,15 @@ body {
 }
 
 .team-member h3 {
-    color: var(--primary-color);
     margin-bottom: 0.5rem;
+    animation: slideInUp 1s ease-out;
+}
+
+.team-member img {
+    transform: scale(1.04);
 }
 
 .team-member p {
-    color: var(--secondary-color);
     font-weight: 500;
 }
 
@@ -396,13 +440,12 @@ body {
 }
 
 /* Footer */
-box-shadow: 0px 10px 10px #371dc98e;
+
 
 .footer {
-    background-color: var(--primary-color);
+    background-color: #16223d;
     color: var(--white);
     padding: 2rem;
-
     text-align: center;
 }
 
@@ -416,30 +459,76 @@ box-shadow: 0px 10px 10px #371dc98e;
     margin: 50px 0px;
 }
 
+.ft-sec h3 {
+    color: white;
+}
+
+.ft-sec p {
+    color: rgb(186, 186, 186);
+    font-weight: 100;
+}
+
+.ft-sec a {
+    color: rgb(237, 237, 237);
+    font-weight: 600;
+}
+
+.ft-sec ul {
+    list-style: none;
+    text-align: left;
+
+    a {
+        color: rgb(186, 186, 186);
+    }
+}
+
+.ft-sec li {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.ft-h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: var(--blue) 3px solid;
+}
+
 .social-links {
     display: flex;
     gap: 1.5rem;
+    padding: 1.5rem 0;
+    align-items: center;
+    display: flex;
+
 }
 
 .social-links a {
-    color: var(--white);
     text-decoration: none;
     transition: color 0.3s;
+
 }
 
-.social-links a:hover {
-    color: var(--accent-color);
+.fa {
+    transition: .5s;
+    /* this is grow duration */
 }
 
-.social-links img {
-    width: 50px;
-    gap: 1rem;
-    border-radius: 50%;
-    transition: transform ease 0.5s;
+.fa:hover {
+    transform: scale(1.5);
+    /* this is grow amount */
 }
 
-.social-links img:hover {
-    transform: translateY(-4px);
+.fa-facebook-square:hover {
+    color: var(--scoial-blue-hover) !important;
+}
+
+.fa-instagram-square:hover {
+    color: var(--scoial-blue-hover) !important;
+}
+
+.fa-square-x-twitter:hover {
+    color: var(--scoial-blue-hover) !important;
 }
 
 /* Animations */
@@ -464,6 +553,30 @@ box-shadow: 0px 10px 10px #371dc98e;
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
