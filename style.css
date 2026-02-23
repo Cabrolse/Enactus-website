@@ -494,6 +494,20 @@ body {
     border-bottom: var(--blue) 3px solid;
 }
 
+.fa-c {
+    transition: 0.3s ease;
+    align-items: left;
+    display: inline-flex;
+}
+
+
+.fa-c:hover,
+.email-c:hover {
+    color: white !important;
+}
+
+
+
 .social-links {
     display: flex;
     gap: 1.5rem;
