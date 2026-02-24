@@ -2,7 +2,7 @@
     --blue: rgb(26, 88, 196);
     --lblue: rgb(96, 165, 250);
     --social-blue: rgb(37, 87, 224);
-    --scoial-blue-hover: rgb(66, 13, 212);
+    --social-blue-hover: rgb(66, 13, 212);
     --white: rgb(255, 255, 255);
 }
 
@@ -257,7 +257,7 @@ body {
 
 
 /* Buttons */
-.cta-button-j {
+.cta-button-2 {
     background-color: var(--blue);
     color: white;
     padding: 1.5rem 6rem;
@@ -286,7 +286,7 @@ body {
 
 }
 
-.cta-button-j:hover {
+.cta-button-2:hover {
     transform: translateY(-2px);
     background-color: rgb(29, 78, 216);
 }
@@ -297,12 +297,29 @@ body {
 
 }
 
+.btn-3 {
+    background-color: rgba(129, 214, 253, 0.4);
+    color: var(--social-blue);
+    font-weight: 600;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 40px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 8rem;
+    margin-bottom: 0.5rem;
+}
+
 .cta-a {
     color: black;
 }
 
 /* About Section */
 /* About Section Layout */
+
+
 .about .container {
     display: flex;
     justify-content: space-between;
@@ -310,7 +327,8 @@ body {
     gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 30vh 20px;
+
 }
 
 .about-content {
@@ -324,7 +342,7 @@ body {
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
     animation: slideInLeft 0.7s ease-out;
     text-align: center;
@@ -348,35 +366,50 @@ body {
 /* Individual images positioned differently */
 .about-img1 {
     position: relative;
-    max-width: 240px;
-    min-width: 240px;
-    top: 20px;
-    right: 10px;
+    max-width: 280px;
+   
+    top: 00px;
+    right: -100px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
     animation: slideInRight 0.7s ease-out;
 }
 
+
+
+
 .about-img2 {
     position: absolute;
-    width: 200px;
+    width: 280px;
     top: 180px;
-    right: 230px;
+    right: 190px;
     border-radius: 12px 4px 12px 4px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: rotate(-3deg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     animation: slideInRight 1.3s ease-out;
 
 }
 
 .about-img3 {
     position: absolute;
-    width: 250px;
-    top: 320px;
-    right: 40px;
+    width: 300px;
+    top: 370px;
+    right: -130px;
     border-radius: 4px 12px 4px 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: rotate(2deg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        srgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
     animation: slideInRight 1.6s ease-out;
 }
 
@@ -399,7 +432,6 @@ body {
 }
 
 .project-card {
-    background-color: var(--white);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -413,7 +445,6 @@ body {
 }
 
 .project-card h3 {
-    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
@@ -422,8 +453,8 @@ body {
 
 /* Team Section */
 .team {
-    padding: 9rem 2rem;
-
+    padding: 9rem 0rem;
+   
 }
 
 .team h2 {
@@ -433,14 +464,28 @@ body {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
     gap: 2rem;
+    padding: 20px 0;
+    scrollbar-width: thin;
     overflow: scroll;
+
+}
+
+.team-grid::-webkit-scrollbar {
+    height: 8px;
+    /* Slim scrollbar (Chrome/Safari) */
+}
+
+.team-grid::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
 }
 
 .team-member {
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -448,6 +493,7 @@ body {
     opacity: 0;
     transform: scale(0.3);
     animation: popIn 1.1s ease-out forwards;
+
 }
 
 .team-member:hover {
@@ -470,10 +516,11 @@ body {
 /* Contact Section */
 .contact {
     padding: 4rem 2rem;
+    height: 100vh;
+    padding-top: 250px;
 }
 
 .contact h2 {
-    color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -499,7 +546,6 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--secondary-color);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
@@ -508,7 +554,6 @@ body {
 
 .footer {
     background-color: #16223d;
-    color: var(--white);
     padding: 2rem;
     text-align: center;
 }
@@ -618,8 +663,21 @@ body {
     color: var(--white) !important;
 }
 
-/* Animations */
-@keyframes slideInDown {
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Example starting position */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+}
+
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Animations*/
+/* @keyframes slideInDown {
     from {
         opacity: 0;
         transform: translateY(-30px);
@@ -671,15 +729,16 @@ body {
     50% {
         opacity: 1;
         transform: scale(1.04);
-        /* Overshoots bigger for bounce */
-    }
+         Overshoots bigger for bounce
+} */
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
-        /* Normal size */
+/* 100% {
+    opacity: 1;
+    transform: scale(1);
+    Normal size 
     }
-}
+} */
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

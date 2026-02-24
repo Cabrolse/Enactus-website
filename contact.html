@@ -4,43 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Page</title>
+    <title>Enactus - Creating Social Impact</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">
-                <h1 ">Enactus</h1>
-                </a>
-            </div>
-            <ul class=" nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="project.html">Projects</a></li>
+    <script src="https://kit.fontawesome.com/720de92e9b.js" crossorigin="anonymous"></script>
 
-                    <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-    </nav>
-</header>
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Get In Touch</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="cta-button">Send Message</button>
-        </form>
-    </div>
-</section>
+</head>
 
 <body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="enc-logo" src="enactus-logo.png">
+                </a>
+                <a href="index.html">
+                    <h1>Enactus<span class="TUD-h1">TUD</span></h1>
+                </a>
+            </div>
 
+            <ul class=" nav-links">
+                <li class="nav-pg"><a href="index.html">Home</a></li>
+                <li class="nav-pg"><a href="project.html">Projects</a></li>
+
+                <li class="nav-pg"><a href="contact.html">Contact</a></li>
+                <li><a href="https://societies.tudublin.ie/societies/enactussocietycitycampus"><button
+                            class="nav-link-j">Join
+                            us!</button></a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <button class="btn-3 contact-btn">Contact Us</button>
+            <h2>Get In Touch</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Second Name" required>
+                <input type="email" placeholder="Your School Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button-2">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="ft-sec">
+
+            </div>
+            <div class="ft-sec">
+                <h3 class="ft-h3">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="https://societies.tudublin.ie/societies/enactussocietycitycampus">Join Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+            </div>
+            <div class="ft-sec">
+                <h3 class="ft-h3">Contact Us</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:enactus@gmail.com">
+                            <i class="fa-c fa-solid fa-envelope" style="color: var(--social-blue);">
+
+                            </i>
+                            <p class="email-c">enactus@gmail.com</p>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+            <div class="ft-sec">
+                <h3 class="ft-h3">Follow US!</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/EnactusTUDublin/"><i
+                            class="fa fa-brands fa-facebook-square fa-2xl" style="color: var(--social-blue);"></i></a>
+                    <a href="https://www.instagram.com/enactustudublin/"><i
+                            class="fa fa-brands fa-instagram-square  fa-2xl" style="color: var(--social-blue);"></i></a>
+                    <a href="https://x.com/enactustudublin"><i class="fa fa-brands fa-square-x-twitter  fa-2xl"
+                            style="color: var(--social-blue);"></i></a>
+                </div>
+                <p style="text-align: left;">Stay updated with our latest <br>
+                    projects and events!</p>
+            </div>
+        </div>
+        <hr>
+        <div class="ft-sec">
+            <p>&copy; 2026 Enactus. All rights reserved.</p>
+
+
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
+
 
 </html>
