@@ -616,11 +616,11 @@ body {
     transition: 0.3s ease;
     align-items: left;
     display: inline-flex;
+    color: var(--social-blue);
 }
 
 
-.fa-c:hover,
-.email-c:hover {
+.fa-c:hover {
     color: white !important;
 }
 
@@ -644,6 +644,7 @@ body {
 .fa {
     transition: .5s;
     /* this is grow duration */
+    color: var(--social-blue);
 }
 
 .fa:hover {
