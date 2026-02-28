@@ -43,6 +43,9 @@ body {
     line-height: 1.6;
 }
 
+ul {
+    list-style: none;
+}
 .header {
     z-index: 3;
 }
@@ -55,6 +58,12 @@ body {
 }
 
 /* Header & Navigation */
+.contact-pg .navbar a, .contact-pg .logo h1 {
+    color: black;
+}
+.contact-pg .TUD-h1 {
+    color: var(--blue) !important;
+}
 .header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -467,16 +476,14 @@ body {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
+    overflow-y: hidden;
     gap: 2rem;
     padding: 20px 0;
     scrollbar-width: thin;
-    overflow: scroll;
-
 }
 
 .team-grid::-webkit-scrollbar {
     height: 8px;
-    /* Slim scrollbar (Chrome/Safari) */
 }
 
 .team-grid::-webkit-scrollbar-thumb {
@@ -518,8 +525,18 @@ body {
     padding: 4rem 2rem;
     height: 100vh;
     padding-top: 250px;
+    margin-bottom: 150px;
 }
 
+.contact-hero {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10% 0; 
+    border-radius: 8%;
+}
+
+.contact-btn {
+    margin: 0 auto;
+}
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -550,118 +567,94 @@ body {
 }
 
 /* Footer */
-
-
 .footer {
     background-color: #16223d;
-    padding: 2rem;
-    text-align: center;
+    padding: 3rem 2rem;
 }
 
 .footer .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    justify-content: space-between;  /* evenly spaces sections */
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin: 50px 0px;
+    gap: 2.5rem;
+    margin: 0 auto;
+    max-width: 1100px;
+    text-align: left;  /* left-align all content */
 }
 
-.ft-sec h3 {
-    color: white;
+.ft-sec {
+    flex: 1 1 220px;
+    min-width: 200px;
 }
 
 .ft-sec p {
-    color: rgb(186, 186, 186);
-    font-weight: 100;
-    transition: color 0.3s ease;
+    color: var(--white);
 }
 
-.ft-sec a {
-    color: rgb(237, 237, 237);
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.ft-sec a:hover {
-    color: white;
-}
-
-.ft-sec ul {
-    list-style: none;
-    text-align: left;
-
-    a {
-        color: rgb(186, 186, 186);
-    }
-}
-
-.ft-sec li {
-    margin-bottom: 0.5rem;
-    text-decoration: none;
-
-}
-
-
-
-.ft-h3 {
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    border-bottom: var(--blue) 3px solid;
+/* Email row: make icon + text inline */
+.ft-sec .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .fa-c {
-    transition: 0.3s ease;
-    align-items: left;
-    display: inline-flex;
+    flex-shrink: 0;  /* prevent icon from shrinking */
     color: var(--social-blue);
+    transition: color 0.3s ease;
 }
-
 
 .fa-c:hover {
-    color: white !important;
+    color: white;
 }
 
+/* Rest stays the same */
+.ft-h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 3px solid var(--blue);
+    padding-bottom: 0.3rem;
+}
 
+.ft-sec a:not(.fa-c) {  /* non-icon links */
+    color: rgb(200, 200, 200);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+.ft-sec a:not(.fa-c):hover {
+    color: white;
+}
+
+/* Social icons */
 .social-links {
     display: flex;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
+    gap: 1rem;
+    padding: 1rem 0;
     align-items: center;
-    display: flex;
-
-}
-
-.social-links a {
-    text-decoration: none;
-    transition: color 0.3s;
-
 }
 
 .fa {
-    transition: .5s;
-    /* this is grow duration */
+    transition: transform 0.3s, color 0.3s;
     color: var(--social-blue);
 }
 
 .fa:hover {
-    transform: scale(1.5);
-    /* this is grow amount */
+    transform: scale(1.2);
+    color: var(--white);
 }
 
-.fa-facebook-square:hover {
-    color: var(--white) !important;
-}
-
-.fa-instagram-square:hover {
-    color: var(--white) !important;
-}
-
-.fa-square-x-twitter:hover {
-    color: var(--white) !important;
+/* Bottom copyright */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 1rem auto 0;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgb(160, 160, 160);
 }
 
 .animate-on-scroll {

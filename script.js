@@ -3,7 +3,6 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const header = document.querySelector('.header');
 
-
 hamburger.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
