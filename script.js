@@ -2,12 +2,13 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const header = document.querySelector('.header');
+const contactForm_inputs = document.querySelectorAll('.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea[name="message"]');
 
 hamburger.addEventListener('click', () => {
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
 
-
+// Change navbar background on scroll
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
@@ -39,6 +40,17 @@ function addObserver(el, options) {
     observer.observe(el);
 }
 
+// Change size of navbar on scroll
 scrollTrigger('.animate-on-scroll', {
     rootMargin: '-20% 0px'
 });
+
+function makeBlue(contactForm_inputs) {
+    contactForm_inputs.style.borderColor = 'var(--social-blue)';
+    contactForm_inputs.style.boxShadow = '0 0 15px rgba(25, 0, 255, 0.5)';
+}
+
+function resetBorder(contactForm_inputs) {
+    contactForm_inputs.style.borderColor = '';
+    contactForm_inputs.style.boxShadow = '';
+}

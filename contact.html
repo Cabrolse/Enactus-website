@@ -46,29 +46,31 @@
             <div class="contact-hero">
             <button class="btn-3 contact-btn">Contact Us</button>
             <h2>Get In Touch</h2>
-            <form class="contact-form">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="a7d68b2d-c29d-4a2a-8506-d7c7a5a1cb89">
                 <label class="contact-lbl" for="Full Name">Full Name</label>
-                <input type="text" placeholder="John Doe" required>
+                <input type="text" placeholder="John Doe" onclick="makeBlue(this)" onblur="resetBorder(this)" required>
                 <label class="contact-lbl" for="Email">TUD Email</label>
-                <input type="email" placeholder="xxxxxx@tudublin.ie" required>
+                <input type="email" placeholder="xxxxxx@tudublin.ie" onclick="makeBlue(this)" onblur="resetBorder(this)" required>
                 <label class="contact-lbl" for="message">How can We Help!</label>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <textarea placeholder="Your Message" name="message" rows="5" onclick="makeBlue(this)" onblur="resetBorder(this)" required></textarea>
                 <button type="submit" class="cta-button-2">Send Message <i class="fa-regular fa-paper-plane" style="color: rgb(255, 255, 255);"></i></button>
             </form>
+            </div>
         </div>
     </section>
 
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-container">
             <div class="ft-sec">
                 <h3 class="ft-h3">Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="https://societies.tudublin.ie/societies/enactussocietycitycampus">Join Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li class="qlink"><a href="index.html" >Home</a></li>
+                    <li class="qlink"><a href="project.html">Projects</a></li>
+                    <li class="qlink"><a href="https://societies.tudublin.ie/societies/enactussocietycitycampus" >Join Us</a></li>
+                    <li class="qlink"><a href="contact.html" >Contact Us</a></li>
             </div>
             <div class="ft-sec">
                 <h3 class="ft-h3">Contact Us</h3>
@@ -77,7 +79,7 @@
                     <li>
                         <a href="mailto:enactus@gmail.com" target="_blank">
                             <i class="fa-c fa-solid fa-envelope"></i>
-    <p class="email-c">Enactus@gmail.com</p>
+                            <p class="email-c">Enactus@gmail.com</p>
                         </a>
                     </li>
                 </ul>
