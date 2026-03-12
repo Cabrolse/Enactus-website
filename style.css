@@ -525,17 +525,22 @@ ul {
 /* Contact Section */
 .contact {
     padding: 4rem 2rem;
-    height: 100vh;
+    height: 120vh;
     padding-top: 150px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
+    background-image: url(hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .contact-hero {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 10% 0; 
-    border-radius: 8%;
-    max-width: 900px;
+    padding: 7% 0; 
+    border-radius: 50px;
+    max-width: 700px;
     margin: 0 auto;
+    background-color: var(--gray);
+    opacity: 0.95;
 }
 
 .contact-form input[type="text"],
