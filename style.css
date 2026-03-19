@@ -591,6 +591,15 @@ ul {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
+.project-section {
+    padding: 4rem 2rem;
+    height: 120vh;
+    padding-top: 150px;
+    /* margin-bottom: 150px; */
+    background-image: url(hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
 /* Footer */
 .footer {
     background-color: #16223d;
