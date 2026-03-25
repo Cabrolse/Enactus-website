@@ -54,3 +54,4 @@ function resetBorder(contactForm_inputs) {
     contactForm_inputs.style.borderColor = '';
     contactForm_inputs.style.boxShadow = '';
 }
+
