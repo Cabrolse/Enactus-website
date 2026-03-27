@@ -728,13 +728,17 @@ biabox */
     justify-content: left;
     height: 100%;
     text-align: left;
-    padding-top: 70%;
+    padding-top: 40%;
+    color: var(--white);
 }
-
+.content-business p{
+   font-size: 3rem;
+   padding: 2.5rem 0
+}
 .a-business {
     font-size: 1.2rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.564);
+    color: rgba(255, 255, 255, 0.664);
     transition: all 0.3s;
     padding: 1.5rem;
 }
@@ -752,13 +756,48 @@ biabox */
     margin: 0 3rem;
 }
 
-.biaBox{
+.biaBox {
+    position: relative;
+    isolation: isolate;
     background-image: url(biabox-hero.png);
-    height: 100vh;
+    min-height: 500px;
     background-size: cover;
-    opacity: 0.85;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
+/* Overlay to match the reference style */
+.biaBox::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8, 18, 38, 0.20) 0%,
+            rgba(8, 18, 38, 0.50) 55%,
+            rgba(7, 18, 46, 0.88) 100%
+        ),
+        radial-gradient(
+            120% 70% at 50% 100%,
+            rgba(37, 87, 224, 0.35) 0%,
+            rgba(37, 87, 224, 0) 65%
+        );
+}
+
+/* Keep text/content above overlay */
+.biaBox > * {
+    position: relative;
+    z-index: 1;
+}
+
+.stats-sec {
+    background-color: var(--blue);
+    height: 45vh;
+}
 
 
 
