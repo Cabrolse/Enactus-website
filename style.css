@@ -6,6 +6,9 @@
     --white: rgb(255, 255, 255);
     --gray: rgb(227, 227, 227);
     --lgray: rgb(241, 241, 241);
+    
+
+    --biabox-green: rgb(3, 71, 3);
 }
 
 html {
@@ -712,68 +715,53 @@ ul {
     transform: translateY(0);
 }
 
-/*Animations*/
-/* @keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* 
+project templates */
+/* 
+biabox */
+
+.content-business {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    height: 100%;
+    text-align: left;
+    padding-top: 70%;
 }
 
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.a-business {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.564);
+    transition: all 0.3s;
+    padding: 1.5rem;
 }
 
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.a-business:hover, .fa1:hover {
+    color: rgba(255, 255, 255, 0.85);
+     color: var(--white);
+    transform: translateX(-10px);
 }
 
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.biaBoxLogo {
+    width: 120px;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    margin: 0 3rem;
 }
 
-@keyframes popIn {
-    50% {
-        opacity: 1;
-        transform: scale(1.04);
-         Overshoots bigger for bounce
-} */
+.biaBox{
+    background-image: url(biabox-hero.png);
+    height: 100vh;
+    background-size: cover;
+    opacity: 0.85;
+}
 
-/* 100% {
-    opacity: 1;
-    transform: scale(1);
-    Normal size 
-    }
-} */
+
+
+
 
 
 /* Responsive Design */
