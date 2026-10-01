@@ -323,7 +323,8 @@ ul {
 }
 
 .btn-3 {
-    background-color: rgba(129, 214, 253, 0.4);
+    background: linear-gradient(120deg, rgba(129, 214, 253, 0.4), rgba(255, 255, 255, 0.7), rgba(129, 214, 253, 0.4));
+    background-size: 220% 100%;
     color: var(--social-blue);
     font-weight: 600;
     border: none;
@@ -335,6 +336,18 @@ ul {
     align-items: center;
     margin-left: 8rem;
     margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
+}
+
+.btn-3:hover {
+    background-position: 100% 50%;
+    box-shadow: 0 8px 18px rgba(37, 87, 224, 0.28);
+    transform: translateY(-4px) scale(1.04) rotate(-1deg);
+}
+
+.btn-3:focus-visible {
+    outline: 3px solid rgba(37, 87, 224, 0.35);
+    outline-offset: 4px;
 }
 
 .cta-a {
@@ -369,7 +382,12 @@ ul {
 .about-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    animation: slideInLeft 0.7s ease-out;
+    color: transparent;
+    background: linear-gradient(90deg, #ef4444, #f59e0b, #eab308, #22c55e, #06b6d4, #3b82f6, #a855f7, #ef4444);
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: slideInLeft 0.7s ease-out, rainbow-text 8s linear infinite;
     text-align: center;
 
 }
@@ -407,7 +425,7 @@ ul {
         rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px,
         rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    animation: slideInRight 0.7s ease-out;
+    animation: slideInRight 0.7s ease-out, about-photo-breathe 6s ease-in-out infinite;
 }
 
 
@@ -424,7 +442,7 @@ ul {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    animation: slideInRight 1.3s ease-out;
+    animation: slideInRight 1.3s ease-out, about-photo-breathe 6s ease-in-out 1s infinite;
 
 }
 
@@ -441,7 +459,7 @@ ul {
         rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px,
         rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    animation: slideInRight 1.6s ease-out;
+    animation: slideInRight 1.6s ease-out, about-photo-breathe 6s ease-in-out 2s infinite;
 }
 
 
@@ -518,6 +536,7 @@ ul {
 
 .team-member {
     padding: 9%;
+
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -879,8 +898,6 @@ biabox */
         margin-bottom: 1rem;
     }
 
-    .nav-links {}
-
     .hamburger {
         display: flex;
     }
@@ -920,6 +937,151 @@ biabox */
     }
 }
 
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header {
+        height: 72px;
+    }
+
+    .hero {
+        min-height: 0;
+        height: auto;
+        padding: 7rem 1rem 4rem;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        padding: 0;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .hero-img {
+        min-width: 0;
+        width: min(100%, 420px);
+        margin: 0 auto;
+    }
+
+    .cta-button-2,
+    .cta-button-c {
+        max-width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
+    .about .container {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        gap: 2rem;
+    }
+
+    .about-content {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .about-content p {
+        text-align: left;
+    }
+
+    .btn-3 {
+        margin-left: 0;
+    }
+
+    .img-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .img-content img,
+    .about-img1,
+    .about-img2,
+    .about-img3 {
+        position: static;
+        width: 100%;
+        max-width: none;
+        transform: none;
+    }
+
+    .about-img1 {
+        grid-column: 1 / -1;
+    }
+
+    .team {
+        padding: 5rem 0;
+    }
+
+    .wave-text span {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .contact,
+    .project-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 7rem 1rem 4rem;
+    }
+
+    .contact-hero {
+        padding: 2rem 1rem;
+        border-radius: 24px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 2.5rem 1rem;
+    }
+
+    .footer .container {
+        gap: 2rem;
+    }
+
+    .ft-sec {
+        min-width: 0;
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-hero h2 {
+        font-size: 2.25rem !important;
+    }
+
+    .project-hero p {
+        font-size: 1rem !important;
+    }
+
+    .team[style]>div[style] {
+        padding: 1rem !important;
+        gap: 1rem !important;
+    }
+
+    .team[style]>div[style]>div {
+        flex-basis: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
 .wave-text span {
     display: inline-block;
     font-size: 4rem;
@@ -954,34 +1116,39 @@ biabox */
     }
 }
 
-.enlargen-text span {
-    display: inline-block;
-    animation: enlargen-animation 2s ease-in-out infinite;
-    transform-origin: center;
-}
-
-.enlargen-text span:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.enlargen-text span:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.enlargen-text span:nth-child(3) {
-    animation-delay: 0.8s;
-}
-
-
-@keyframes enlargen-animation {
+@keyframes about-photo-breathe {
 
     0%,
     100% {
-        transform: scale(1);
+        filter: brightness(1) saturate(1);
     }
 
-    25% {
-        transform: scale(1.1);
+    50% {
+        filter: brightness(1.05) saturate(1.08);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-img1,
+    .about-img2,
+    .about-img3 {
+        animation: none;
+    }
+}
+
+@keyframes rainbow-text {
+    from {
+        background-position: 0% 50%;
     }
 
+    to {
+        background-position: 300% 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-content h2 {
+        animation: slideInLeft 0.7s ease-out;
+    }
 }
