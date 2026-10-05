@@ -370,7 +370,7 @@ ul {
     gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30vh 20px;
+    padding: 30vh 20px 45vh;
 
 }
 
@@ -569,12 +569,19 @@ ul {
     font-weight: 500;
 }
 
-.index-pg .about,
+.index-pg .about {
+    background: linear-gradient(180deg, var(--white) 0%, var(--white) 82%, #16223d 100%);
+    color: #16223d;
+}
+
 .index-pg .team {
     background-color: #16223d;
 }
 
-.index-pg .about-content p,
+.index-pg .about-content p {
+    color: #16223d;
+}
+
 .index-pg .team-member p {
     color: rgba(255, 255, 255, 0.82);
 }
@@ -670,7 +677,8 @@ ul {
 
 /* Footer */
 .footer {
-    background-color: #16223d;
+    background-color: #10182c;
+    border-top: 3px solid rgba(96, 165, 250, 0.45);
     padding: 3rem 2rem;
 }
 
