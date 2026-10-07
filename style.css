@@ -48,6 +48,7 @@ body {
 ul {
     list-style: none;
 }
+
 .header {
     z-index: 3;
 }
@@ -60,12 +61,15 @@ ul {
 }
 
 /* Header & Navigation */
-.contact-pg .navbar a, .contact-pg .logo h1 {
+.contact-pg .navbar a,
+.contact-pg .logo h1 {
     color: black;
 }
+
 .contact-pg .TUD-h1 {
     color: var(--blue) !important;
 }
+
 .header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -378,7 +382,7 @@ ul {
 .about-img1 {
     position: relative;
     max-width: 280px;
-   
+
     top: 00px;
     right: -100px;
     border-radius: 12px;
@@ -465,7 +469,7 @@ ul {
 /* Team Section */
 .team {
     padding: 9rem 0rem;
-   
+
 }
 
 .team h2 {
@@ -535,7 +539,7 @@ ul {
 
 .contact-hero {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 7% 0; 
+    padding: 7% 0;
     border-radius: 50px;
     max-width: 700px;
     margin: 0 auto;
@@ -562,6 +566,7 @@ ul {
     margin: 1rem auto;
     display: flex;
 }
+
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -599,13 +604,13 @@ ul {
 
 .footer .container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 2.5rem;
     margin: 0 auto;
     max-width: 1100px;
-    text-align: left; 
+    text-align: left;
     margin-bottom: 2.5rem;
 }
 
@@ -625,15 +630,18 @@ ul {
     align-items: center;
     gap: 0.5rem;
 }
+
 .qlink {
     transition: transform 0.3s ease;
 }
+
 .qlink:hover {
     transform: translateX(10px);
 }
 
 .fa-c {
-    flex-shrink: 0;  /* prevent icon from shrinking */
+    flex-shrink: 0;
+    /* prevent icon from shrinking */
     color: var(--social-blue);
     transition: color 0.3s ease;
 }
@@ -651,7 +659,8 @@ ul {
     padding-bottom: 0.3rem;
 }
 
-.ft-sec a:not(.fa-c) {  /* non-icon links */
+.ft-sec a:not(.fa-c) {
+    /* non-icon links */
     color: rgb(200, 200, 200);
     font-weight: 500;
     text-decoration: none;
@@ -703,68 +712,6 @@ ul {
     transform: translateY(0);
 }
 
-/*Animations*/
-/* @keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes popIn {
-    50% {
-        opacity: 1;
-        transform: scale(1.04);
-         Overshoots bigger for bounce
-} */
-
-/* 100% {
-    opacity: 1;
-    transform: scale(1);
-    Normal size 
-    }
-} */
 
 
 /* Responsive Design */
