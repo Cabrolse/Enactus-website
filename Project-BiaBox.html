@@ -11,17 +11,7 @@
 
 </head>
 
-<body class="index-pg">
-    <!-- scroll snaps option -->
-    <!-- <style>
-        html {
-            scroll-snap-type: y mandatory;
-        }
-        section {
-            scroll-snap-align: start;
-            transition: all 3.5s;
-        }
-    </style> -->
+<body class="">
     <!-- Navigation Header -->
     <header class="header">
         <nav class="navbar">
@@ -29,11 +19,9 @@
                 <a href="index.html">
                     <img class="enc-logo" src="images/enactus-logo.png">
                 </a>
-                <div class="nav-text">
-                    <a href="index.html">
-                        <h1>Enactus<span class="TUD-h1">TUD</span></h1>
-                    </a>
-                </div>
+                <a href="index.html">
+                    <h1>Enactus<span class="TUD-h1">TUD</span></h1>
+                </a>
             </div>
 
             <ul class=" nav-links">
@@ -53,91 +41,53 @@
             </div>
         </nav>
     </header>
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2 class="animate-on-scroll">Welcome to the <span style="color: var(--lblue); font-weight: bold;">TUD
-                    Enactus society</span></h2>
-            <p class="animate-on-scroll">Empowering entrepreneurs to solve the world's toughest social and environmental
-                challenges</p>
-            <a class="cta-a" href="https://societies.tudublin.ie/societies/enactussocietycitycampus"><button
-                    class="cta-button-2 animate-on-scroll">Join
-                    Us!</button></a>
-            <a class="cta-a" href="contact.html"><button class="cta-button-c animate-on-scroll">Contact Us</button></a>
-            <a href="https://www.instagram.com/enactustudublin/"><i
-                    class="fa fa-brands fa-instagram  fa-2xl animate-on-scroll"
-                    style="color: var(--social-blue);"></i></a>
-        </div>
-        <div>
-            <img class="hero-img animate-on-scroll" src="images/enactus-hero.jpeg" alt="photo of enactus comottee">
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    <section id="BiaBox" class="biaBox">
         <div class="container">
-            <div class="about-content animate-on-scroll">
-                <button class="btn-3">About us</button>
-                <h2>
-                    Who We Are
-                </h2>
-                <p>We are a community of student entrepreneurs creating social impact through business. Our mission
-                    is to empower the next generation of leaders to create sustainable value for communities.</p>
-            </div>
-            <div class="img-content">
-                <img class="about-img1 animate-on-scroll" src="images/about-img-1.jpg" alt="">
-                <img class="about-img2 animate-on-scroll" src="images/about-img-2.jpg" alt="">
-                <img class="about-img3 animate-on-scroll" src="images/about-img-3.jpg" alt="">
+            <div class="content-business">
+                <a href="project.html" class="a-business"><i class="fa-solid fa1 fa-arrow-left-long fa-xl "></i> Back to
+                    Projects</a>
+                <img class="biaBoxLogo animate-on-scroll" src="images/biabox_logo.jpg" alt="BiaBox Logo">
+                <p class="animate-on-scroll" style="max-width: 600px; margin: 0 auto 30px auto; font-size: 1.2rem;">
+                    BiaBox is a social enterprise that provides affordable and nutritious meal kits to low-income
+                    families. Our mission is to combat food insecurity and promote healthy eating habits in underserved
+                    communities.
+                </p>
             </div>
         </div>
     </section>
-
-
-    <!-- Team Section -->
-    <section id="team" class="team">
+    <!-- stats section -->
+    <!-- stats section -->
+    <section class="stats-sec">
         <div class="container">
-            <div class="wave-container">
-                <h1 class="wave-text">
-                    <span>Meet </span> <span>Our </span> <span>Team</span>
-                </h1>
-            </div>
-            <div class="team-grid">
-                <div class="team-member animate-on-scroll">
-                    <img src="images/person.jpeg" alt="">
-                    <h3 class="animate-on-scroll">Team Member 1</h3>
-                    <p>Role</p>
-                </div>
-                <div class="team-member animate-on-scroll">
-                    <img src="images/person.jpeg" alt="">
-                    <h3>Team Member 2</h3>
-                    <p>Role</p>
-                </div>
-                <div class="team-member animate-on-scroll">
-                    <img src="images/person.jpeg" alt="">
-                    <h3>Team Member 3</h3>
-                    <p>Role</p>
-                </div>
-                <div class="team-member animate-on-scroll">
-                    <img src="images/person.jpeg" alt="">
-                    <h3>Team Member 4</h3>
-                    <p>Role</p>
-                </div>
-                <div class="team-member animate-on-scroll">
-                    <img src="images/person.jpeg" alt="">
-                    <h3>Team Member 5</h3>
-                    <p>Role</p>
-                </div>
-                <div class="team-member animate-on-scroll">
-                    <img src="images/person.jpeg" alt="">
-                    <h3>Team Member 6</h3>
-                    <p>Role</p>
-                </div>
-            </div>
+            <table class="stats-table" aria-label="BiaBox impact statistics">
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-leaf stats-icon" aria-hidden="true"></i>
+                        <h3>Food Saved</h3>
+                        <p class="stats-sub">100 kg</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-briefcase stats-icon" aria-hidden="true"></i>
+                        <h3>Jobs Created</h3>
+                        <p class="stats-sub">5</p>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-users stats-icon" aria-hidden="true"></i>
+                        <h3>Customers</h3>
+                        <p class="stats-sub">10</p>
+                    </td>
+                    <td>
+                        <i class="fa-regular fa-clock stats-icon" aria-hidden="true"></i>
+                        <h3>Years Active</h3>
+                        <p class="stats-sub">1 year</p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </section>
-
-
-
+    <!-- founder story -->
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
