@@ -792,69 +792,6 @@ ul {
     transform: translateY(0);
 }
 
-/*Animations*/
-/* @keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(200px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes popIn {
-    50% {
-        opacity: 1;
-        transform: scale(1.04);
-         Overshoots bigger for bounce
-} */
-
-/* 100% {
-    opacity: 1;
-    transform: scale(1);
-    Normal size 
-    }
-} */
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
