@@ -330,26 +330,32 @@ ul {
 }
 
 .btn-3 {
-    background: linear-gradient(120deg, rgba(129, 214, 253, 0.4), rgba(255, 255, 255, 0.7), rgba(129, 214, 253, 0.4));
+    background: linear-gradient(120deg,
+            #2d4d8d 0%,
+            #293e6f 30%,
+            rgba(56, 189, 248, 0.35) 50%,
+            #274488 70%,
+            #172646 100%);
     background-size: 220% 100%;
-    color: var(--social-blue);
+    background-position: 0% 50%;
+    color: #e2e8f0;
     font-weight: 600;
-    border: none;
+    border: 1px solid rgba(56, 189, 248, 0.35);
     padding: 0.6rem 1rem;
     border-radius: 40px;
-    border: none;
     font-size: 1rem;
     cursor: pointer;
     align-items: center;
     margin-left: 8rem;
     margin-bottom: 0.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
 }
 
 .btn-3:hover {
     background-position: 100% 50%;
-    box-shadow: 0 8px 18px rgba(37, 87, 224, 0.28);
     transform: translateY(-4px) scale(1.04) rotate(-1deg);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.25);
 }
 
 .btn-3:focus-visible {
@@ -389,21 +395,34 @@ ul {
 .about-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: transparent;
-    background: linear-gradient(90deg, #ef4444, #f59e0b, #eab308, #22c55e, #06b6d4, #3b82f6, #a855f7, #ef4444);
-    background-size: 300% 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: slideInLeft 0.7s ease-out, rainbow-text 8s linear infinite;
-    text-align: center;
-
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+    color: whitesmoke;
 }
 
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
 .about-content p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.7;
     animation: slideInLeft 0.7s ease-out;
     text-align: left;
+    color: white !important;
 
 }
 
@@ -472,7 +491,13 @@ ul {
 
 /* Projects Section */
 .projects {
-    padding: 4rem 2rem;
+    height: 100vh;
+    height: 100dvh;
+    /* Adapts to mobile browser address bars */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projects h2 {
@@ -493,7 +518,6 @@ ul {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-
 }
 
 .project-card:hover {
@@ -614,12 +638,38 @@ ul {
 }
 
 .index-pg .about {
-    background: linear-gradient(180deg, var(--white) 0%, var(--white) 82%, #16223d 100%);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.034) 82%, #16223d 100%),
+
+        url('aboutbg1.png');
     color: #16223d;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.index-pg .team {
-    background-color: #16223d;
+.team {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #e2e8f0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.10), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.12), transparent 50%),
+        linear-gradient(135deg, #0d1628 0%, #16223d 50%, #080e1a 100%);
+}
+
+/* Subtle diagonal sheen overlay */
+.team::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.025) 50%, transparent 60%),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.012) 0 2px, transparent 2px 6px);
 }
 
 .index-pg .about-content p {
@@ -1052,10 +1102,6 @@ ul {
 
     .about-content p {
         text-align: left;
-    }
-
-    .btn-3 {
-        margin-left: 0;
     }
 
     .img-content {

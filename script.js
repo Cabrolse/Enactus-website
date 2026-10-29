@@ -5,6 +5,7 @@ const header = document.querySelector('.header');
 const contactForm_inputs = document.querySelectorAll('.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea[name="message"]');
 const progress = document.getElementById('progress');
 const bar = document.getElementById('bar');
+const track = document.getElementById('track');
 
     // Mobile menu toggle
 if (hamburger && navLinks) {
@@ -89,7 +90,7 @@ function resetBorder(contactForm_inputs) {
 }
 
 // Team section scroll bar
-const track = document.getElementById('track');
+
 
 if (track && progress && bar) {
     const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
