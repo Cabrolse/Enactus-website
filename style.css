@@ -2,13 +2,13 @@
     --blue: rgb(26, 88, 196);
     --lblue: rgb(96, 165, 250);
     --social-blue: rgb(37, 87, 224);
-    --social-blue-hover: rgb(66, 13, 212);
     --white: rgb(255, 255, 255);
     --gray: rgb(227, 227, 227);
     --lgray: rgb(241, 241, 241);
-
-
-    --biabox-green: rgb(3, 71, 3);
+    --site-background:
+        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.10), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.12), transparent 50%),
+        linear-gradient(135deg, #0d1628 0%, #16223d 50%, #080e1a 100%);
 }
 
 html {
@@ -17,48 +17,30 @@ html {
     height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
-
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 *,
-*:before,
-*:after {
-    /* Ensures padding/borders don't add to width/height */
-    box-sizing: inherit;
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-
 }
-
-
-
 
 a {
     text-decoration: none;
 }
 
-
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-}
-
-
-
-.index-pg {
-    background-color: #16223d;
-    color: var(--white);
+    background: var(--site-background);
 }
 
 ul {
@@ -67,13 +49,20 @@ ul {
 
 .header {
     z-index: 3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-    max-width: 2400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-
 }
 
 /* Header & Navigation */
@@ -84,17 +73,6 @@ ul {
 
 .contact-pg .TUD-h1 {
     color: var(--blue) !important;
-}
-
-.header {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 90px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .navbar {
@@ -111,7 +89,6 @@ ul {
 
 .TUD-h1 {
     color: var(--lblue);
-
 }
 
 .header.scrolled {
@@ -157,9 +134,7 @@ ul {
     text-decoration: none;
     color: black;
     display: flex;
-
     align-items: center;
-
 }
 
 
@@ -193,7 +168,6 @@ ul {
 
 .nav-links a:hover {
     color: var(--blue);
-
 }
 
 .nav-pg {
@@ -249,7 +223,6 @@ ul {
     justify-content: center;
     height: 100vh;
     position: relative;
-
 }
 
 .hero-card {
@@ -259,12 +232,10 @@ ul {
     display: flex;
     align-items: center;
     margin: 0 2rem;
-
 }
 
 .hero-content {
     padding: 0 10%;
-
 }
 
 .hero-content h2 {
@@ -272,7 +243,6 @@ ul {
     font-size: 4rem;
     margin-bottom: 1rem;
     animation: slideInDown 1s ease-out;
-
 }
 
 .hero-content p {
@@ -291,15 +261,6 @@ ul {
     animation: popIn 2s ease-out forwards;
     transition: transform 0.3s ease;
 }
-
-
-
-.hero-img::after {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-
 
 /* Buttons */
 .cta-button-2 {
@@ -381,10 +342,7 @@ ul {
 }
 
 /* About Section */
-/* About Section Layout */
-.about {
-    border-top: 3px solid;
-}
+
 
 .about .container {
     display: flex;
@@ -419,19 +377,6 @@ ul {
     color: whitesmoke;
 }
 
-/* Animate Background Image */
-
-@-webkit-keyframes aitf {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-
 .about-content p {
     font-size: 1.5rem;
     line-height: 1.7;
@@ -443,14 +388,10 @@ ul {
 
 .img-content {
     position: relative;
-
-
-
 }
 
 .img-content img {
     height: auto;
-    /* width: 100%; */
 }
 
 /* Individual images positioned differently */
@@ -478,7 +419,6 @@ ul {
     top: 180px;
     right: 190px;
     border-radius: 12px 4px 12px 4px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: rotate(-3deg);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -493,7 +433,6 @@ ul {
     top: 370px;
     right: -130px;
     border-radius: 4px 12px 4px 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: rotate(2deg);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px,
@@ -506,12 +445,11 @@ ul {
 
 /* Projects Section */
 .projects {
-
+    height: 100dvh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .projects h2 {
@@ -543,8 +481,6 @@ ul {
     margin-bottom: 1rem;
 }
 
-/* 
-individual projects */
 .card {
     display: flex;
     flex-wrap: wrap;
@@ -565,10 +501,14 @@ individual projects */
 }
 
 
-
 /* Team Section */
 .team {
     padding: 9rem 0rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #e2e8f0;
+    padding: 5rem 0;
 
 }
 
@@ -584,7 +524,6 @@ individual projects */
     text-align: center;
     font-size: 2.2rem;
     font-weight: 500;
-
     margin-bottom: 48px;
 }
 
@@ -637,7 +576,6 @@ individual projects */
     scroll-snap-align: start;
     cursor: pointer;
     animation: popIn 1.1s ease-out forwards;
-
 }
 
 .team-member::after {
@@ -671,41 +609,6 @@ individual projects */
     font-weight: 500;
 }
 
-.index-pg .about {
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.034) 82%, #16223d 100%),
-
-        url('aboutbg1.png');
-    color: #16223d;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.team {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    color: #e2e8f0;
-    background:
-        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.10), transparent 45%),
-        radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.12), transparent 50%),
-        linear-gradient(135deg, #0d1628 0%, #16223d 50%, #080e1a 100%);
-}
-
-/* Subtle diagonal sheen overlay */
-.team::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background:
-        linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.025) 50%, transparent 60%),
-        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.012) 0 2px, transparent 2px 6px);
-}
-
 .index-pg .about-content p {
     color: #16223d;
 }
@@ -732,7 +635,7 @@ individual projects */
     margin-top: 32px;
 }
 
-/* team member  */
+/* Team member details */
 
 .member-bio {
     position: absolute;
@@ -776,7 +679,6 @@ individual projects */
 .team-member:hover .member-bio,
 .team-member:focus-visible .member-bio {
     opacity: 1;
-
     transform: translateY(0);
 }
 
@@ -792,10 +694,8 @@ individual projects */
     width: 100%;
     max-width: 400px;
     height: 24px;
-    /* taller hit area for easier dragging */
     cursor: pointer;
     touch-action: none;
-    /* stops the page from scrolling while dragging */
     user-select: none;
 }
 
@@ -835,9 +735,6 @@ individual projects */
     height: 120vh;
     padding-top: 150px;
     /* margin-bottom: 150px; */
-    background-image: url(images/hero-bg.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .contact-hero {
@@ -904,9 +801,6 @@ individual projects */
     height: 120vh;
     padding-top: 150px;
     /* margin-bottom: 150px; */
-    background-image: url(images/hero-bg.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 /* Footer */
@@ -964,7 +858,6 @@ individual projects */
     color: white;
 }
 
-/* Rest stays the same */
 .ft-h3 {
     color: white;
     font-size: 1.1rem;
@@ -1016,9 +909,7 @@ individual projects */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
-    /* Example starting position */
     transition: opacity 0.6s ease, transform 0.6s ease;
-
 }
 
 .animate-on-scroll.active {
@@ -1060,9 +951,6 @@ individual projects */
         font-size: 2rem;
     }
 
-    .about .container {
-        flex-direction: column;
-    }
 
     .about-content {
         max-width: 100%;
@@ -1120,6 +1008,8 @@ individual projects */
         padding-top: 5rem;
         padding-bottom: 5rem;
         gap: 2rem;
+        flex-direction: column;
+
     }
 
     .about-content {
@@ -1152,9 +1042,7 @@ individual projects */
         grid-column: 1 / -1;
     }
 
-    .team {
-        padding: 5rem 0;
-    }
+
 
     .wave-text span {
         font-size: clamp(2rem, 10vw, 3rem);
@@ -1283,16 +1171,6 @@ individual projects */
     .about-img2,
     .about-img3 {
         animation: none;
-    }
-}
-
-@keyframes rainbow-text {
-    from {
-        background-position: 0% 50%;
-    }
-
-    to {
-        background-position: 300% 50%;
     }
 }
 
