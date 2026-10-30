@@ -163,3 +163,4 @@ if (track && progress && bar) {
     window.addEventListener('resize', render);
     render();
 }
+

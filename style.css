@@ -54,6 +54,8 @@ body {
     line-height: 1.6;
 }
 
+
+
 .index-pg {
     background-color: #16223d;
     color: var(--white);
@@ -68,7 +70,7 @@ ul {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 2400px;
     margin: 0 auto;
     padding: 0 20px;
 
@@ -234,7 +236,7 @@ ul {
 
 /* Hero Section */
 .hero {
-    background-image: url(images/hero-bg.jpg);
+
     background-size: cover;
     background-position: center;
     padding: 0 2rem;
@@ -247,6 +249,17 @@ ul {
     justify-content: center;
     height: 100vh;
     position: relative;
+
+}
+
+.hero-card {
+    background-image: url(images/hero-bg.jpg);
+    padding: 8rem 2rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+
 }
 
 .hero-content {
@@ -369,7 +382,9 @@ ul {
 
 /* About Section */
 /* About Section Layout */
-
+.about {
+    border-top: 3px solid;
+}
 
 .about .container {
     display: flex;
@@ -491,13 +506,12 @@ ul {
 
 /* Projects Section */
 .projects {
-    height: 100vh;
-    height: 100dvh;
-    /* Adapts to mobile browser address bars */
+
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .projects h2 {
@@ -529,6 +543,26 @@ ul {
     margin-bottom: 1rem;
 }
 
+/* 
+individual projects */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background-image: url(images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 90%;
+    max-width: 1200px;
+
+    box-sizing: border-box;
+
+    padding: 60px 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.411);
+}
 
 
 
@@ -1044,16 +1078,7 @@ ul {
         color: black !important;
         background-color: aqua;
     }
-}
 
-@media (max-width: 900px) {
-    .navbar {
-        padding: 0.75rem 1rem;
-    }
-
-}
-
-@media (max-width: 768px) {
     .container {
         padding: 0 1rem;
     }
@@ -1068,6 +1093,8 @@ ul {
         padding: 7rem 1rem 4rem;
         gap: 2rem;
     }
+
+
 
     .hero-content {
         padding: 0;
@@ -1163,10 +1190,27 @@ ul {
     }
 }
 
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-card {
+        display: table-column;
+        margin: 0;
+
+    }
+
+
+}
+
+
 @media (max-width: 600px) {
     .team-grid {
         grid-template-columns: 1fr;
     }
+
+
 
     .project-hero h2 {
         font-size: 2.25rem !important;
